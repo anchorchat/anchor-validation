@@ -1,0 +1,50 @@
+{
+  "name": "anchor-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for javascript modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test nyc mocha --compilers js:babel-core/register test/*",
+    "test:watch": "NODE_ENV=test mocha --watch --compilers js:babel-core/register test/*",
+    "watch": "babel -d dist/ -w src/",
+    "compile": "rm -rf dist && babel -d dist/ src/",
+    "lint": "eslint src/*",
+    "copy": "cp -rf package.json README.md dist",
+    "build": "npm run compile && npm run copy",
+    "dist": "cd dist && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anchorchat/anchor-validation.git"
+  },
+  "keywords": [
+    "validation",
+    "javascript",
+    "module"
+  ],
+  "author": "Anchor.Chat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anchorchat/anchor-validation/issues"
+  },
+  "homepage": "https://github.com/anchorchat/anchor-validation#readme",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-mocha": "^4.8.0",
+    "eslint-plugin-react": "^6.10.0",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
+    "sinon": "^1.17.7"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
