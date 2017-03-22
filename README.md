@@ -16,10 +16,10 @@ import { maxLength, minLength, required, isAlphanumeric } from 'anchor-validatio
     type="text"
     validate={
       [
-        required('required'),
-        minLength(2, 'error_min_length'),
-        maxLength(15, 'error_max_length'),
-        isAlphanumeric('error_not_alphanumeric')
+        value => required(value, 'required'),
+        value => minLength(2)(value, 'error_min_length'),
+        value => maxLength(15)(value, 'error_max_length'),
+        value => isAlphanumeric(value, 'error_not_alphanumeric')
       ]
     }
   />
