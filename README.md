@@ -12,7 +12,14 @@ import { maxLength, minLength, required, isAlphanumeric } from 'anchor-validatio
     component={renderField}
     label="username"
     type="text"
-    validate={[required, minLength(2), maxLength(15), isAlphanumeric]}
+    validate={
+      [
+        required('required'),
+        minLength(2, 'error_min_length'),
+        maxLength(15, 'error_max_length'),
+        isAlphanumeric('error_not_alphanumeric')
+      ]
+    }
   />
   <Button onClick={handleSubmit(onSubmit)} disabled={invalid || submitting}>
     <p>Sign in</p>
