@@ -3,6 +3,8 @@
 Module for exposing a few validation methods to be used in redux-forms.
 
 # Examples
+
+## [redux-form](http://redux-form.com/6.5.0/docs/api/)
 ```
 import { maxLength, minLength, required, isAlphanumeric } from 'anchor-validation';
 
