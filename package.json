@@ -1,7 +1,7 @@
 {
-  "name": "anchor-boilerplate",
+  "name": "anchor-validation",
   "version": "1.0.0",
-  "description": "boilerplate for javascript modules",
+  "description": "anchor-validation for anchor-ui kit",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test nyc mocha --compilers js:babel-core/register test/*",
