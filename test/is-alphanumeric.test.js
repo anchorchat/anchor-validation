@@ -3,8 +3,8 @@ import { expect } from 'chai';
 import { isAlphanumeric } from '../src';
 
 describe('isAlphanumeric', () => {
-  it('should return "Must be alphanumeric" if string is not alphanumeric', () => {
-    expect(isAlphanumeric('not@lphanumeric')).to.equal('Must be alphanumeric');
+  it('should return error message if validation fails', () => {
+    expect(isAlphanumeric('not@lphanumeric', 'error_not_alphanumeric')).to.equal('error_not_alphanumeric');
   });
 
   it('should return undefined if value passes check', () => {

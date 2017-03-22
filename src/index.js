@@ -1,8 +1,13 @@
-export const required = value => (value ? undefined : 'Required');
+export const required = (value, error) => (value ? undefined : error);
+
 export const maxLength = max => (
-  value => (value && value.length > max ? `Must be ${max} characters or less` : undefined)
+  (value, error) => (value && value.length > max ? error : undefined)
 );
+
 export const minLength = min => (
-  value => (value && value.length < min ? `Must be atleast ${min} characters` : undefined)
+  (value, error) => (value && value.length < min ? error : undefined)
 );
-export const isAlphanumeric = value => (value && /[^a-zA-Z0-9]/.test(value) ? 'Must be alphanumeric' : undefined);
+
+export const isAlphanumeric = (value, error) => (
+  value && /[^a-zA-Z0-9]/.test(value) ? error : undefined
+);

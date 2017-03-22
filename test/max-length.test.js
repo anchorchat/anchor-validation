@@ -7,11 +7,11 @@ describe('maxLength', () => {
     expect(maxLength(15)).to.be.a('function');
   });
 
-  it('should return "Must be 10 characters or less" if both values are provided', () => {
-    expect(maxLength(10)('12345678910')).to.equal('Must be 10 characters or less');
+  it('should return error message if validation fails', () => {
+    expect(maxLength(10)('12345678910', 'error_max_length')).to.equal('error_max_length');
   });
 
   it('should return undefined if value passes check', () => {
-    expect(maxLength(10)('123456789')).to.equal(undefined);
+    expect(maxLength(10)('123456789', 'error_max_length')).to.equal(undefined);
   });
 });

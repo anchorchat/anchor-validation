@@ -7,11 +7,11 @@ describe('minLength', () => {
     expect(minLength(15)).to.be.a('function');
   });
 
-  it('should return "Must be atleast 10 characters" if both values are provided', () => {
-    expect(minLength(10)('123456789')).to.equal('Must be atleast 10 characters');
+  it('should return error message if validation fails', () => {
+    expect(minLength(10)('123456789', 'error_min_length')).to.equal('error_min_length');
   });
 
   it('should return undefined if value passes check', () => {
-    expect(minLength(9)('123456789')).to.equal(undefined);
+    expect(minLength(9)('123456789', 'error_min_length')).to.equal(undefined);
   });
 });
