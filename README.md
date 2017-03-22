@@ -1,6 +1,15 @@
 # Anchor validation
 
+[![Build Status](https://travis-ci.org/anchorchat/anchor-validation.svg?branch=master)](https://travis-ci.org/anchorchat/anchor-validation)
+
 Module for exposing a few validation methods to be used in redux-forms.
+
+## Usage
+
+Install from npm
+
+[![NPM](https://nodei.co/npm/anchor-validation.png)](https://nodei.co/npm/anchor-validation/)
+
 
 # Examples
 
