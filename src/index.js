@@ -1,3 +1,5 @@
+'use strict';
+
 export const required = (value, error) => (value ? undefined : error);
 
 export const maxLength = max => (
