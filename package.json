@@ -46,5 +46,8 @@
     "presets": [
       "env"
     ]
+  },
+  "dependencies": {
+    "isemail": "^2.2.1"
   }
 }

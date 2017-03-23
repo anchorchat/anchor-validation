@@ -1,3 +1,5 @@
+import IsEmail from 'isemail';
+
 export const required = (value, error) => (value ? undefined : error);
 
 export const maxLength = max => (
@@ -10,4 +12,8 @@ export const minLength = min => (
 
 export const isAlphanumeric = (value, error) => (
   value && /[^a-zA-Z0-9]/.test(value) ? error : undefined
+);
+
+export const isEmail = (value, error) => (
+  value && !IsEmail.validate(value) ? error : undefined
 );
