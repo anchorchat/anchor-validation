@@ -1,3 +1,5 @@
+export { default as normalizeDate } from './normalizers';
+
 export const required = (value, error) => (value ? undefined : error);
 
 export const maxLength = max => (
