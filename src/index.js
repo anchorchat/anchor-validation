@@ -1,4 +1,4 @@
-export normalizeDate from './date-normalizer';
+export { default as normalizeDate } from './normalizers/date';
 
 export const required = (value, error) => (value ? undefined : error);
 
