@@ -20,8 +20,6 @@ export const normalizeUsername = (value) => {
   }
 
   const valueWithoutI = value.replace(/[I]/g, match => match.toLowerCase());
-  console.log(valueWithoutI);
 
-  console.log('value should have no capital i now');
   return valueWithoutI.replace(/[^a-zA-Z0-9\-_]/g, '');
 };
