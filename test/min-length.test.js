@@ -11,6 +11,10 @@ describe('minLength', () => {
     expect(minLength(10)('123456789', 'error_min_length')).to.equal('error_min_length');
   });
 
+  it('should return true if validation fails and no error message is specified', () => {
+    expect(minLength(10)('123456789')).to.equal(true);
+  });
+
   it('should return undefined if value passes check', () => {
     expect(minLength(9)('123456789', 'error_min_length')).to.equal(undefined);
   });
