@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 import { expect } from 'chai';
-import { oneOf, isEqual, isAlphanumeric, isEmail } from '../src';
+import { oneOf, isEqual, isAlphanumeric } from '../src';
 
 describe('oneOf', () => {
   it('should return undefined if both validations pass', () => {
