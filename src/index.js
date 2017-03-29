@@ -28,5 +28,5 @@ export const isNotEqual = (value, comparison, error = true) => (
 );
 
 export const oneOf = (fn1, fn2, error = true) => (
-  (fn1 || fn2) ? error : undefined
+  (fn1 && fn2) ? error : undefined
 );
