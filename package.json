@@ -1,6 +1,6 @@
 {
   "name": "anchor-validation",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "anchor-validation for anchor-ui kit",
   "main": "index.js",
   "scripts": {

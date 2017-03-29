@@ -7,6 +7,10 @@ describe('isEmail', () => {
     expect(isEmail('notemail', 'error_no_email')).to.equal('error_no_email');
   });
 
+  it('should return true if validation fails and no error message is specified', () => {
+    expect(isEmail('notemail')).to.equal(true);
+  });
+
   it('should return undefined if value passes check', () => {
     expect(isEmail('test@hotmail.com')).to.equal(undefined);
   });
