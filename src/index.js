@@ -22,3 +22,7 @@ export const isEmail = (value, error) => {
 export const isEqual = (value, comparison, error) => (
   (value && comparison && value !== comparison) ? error : undefined
 );
+
+export const isNotEqual = (value, comparison, error) => (
+  (value && comparison && value === comparison) ? error : undefined
+);
