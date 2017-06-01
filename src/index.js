@@ -1,4 +1,4 @@
-import getAge from '../utils/get-age';
+import getAge from './get-age';
 
 export { normalizeDate, normalizeUsername } from './normalizers';
 
