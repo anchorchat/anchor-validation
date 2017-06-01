@@ -1,3 +1,5 @@
+import getAge from './get-age';
+
 export { normalizeDate, normalizeUsername } from './normalizers';
 
 export const required = (value, error = true) => (value ? undefined : error);
@@ -8,6 +10,14 @@ export const maxLength = max => (
 
 export const minLength = min => (
   (value, error = true) => (value && value.length < min ? error : undefined)
+);
+
+export const maxAge = max => (
+  (value, error = true) => (getAge(value) > max ? error : undefined)
+);
+
+export const minAge = min => (
+  (value, error = true) => (getAge(value) < min ? error : undefined)
 );
 
 export const isAlphanumeric = (value, error = true) => (
