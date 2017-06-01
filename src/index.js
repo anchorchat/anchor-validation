@@ -12,12 +12,12 @@ export const minLength = min => (
   (value, error = true) => (value && value.length < min ? error : undefined)
 );
 
-export const maxAge = max => (
-  (value, error = true) => (getAge(value) > max ? error : undefined)
+export const maxAge = (max, format) => (
+  (value, error = true) => (getAge(value, format) > max ? error : undefined)
 );
 
-export const minAge = min => (
-  (value, error = true) => (getAge(value) < min ? error : undefined)
+export const minAge = (min, format) => (
+  (value, error = true) => (getAge(value, format) < min ? error : undefined)
 );
 
 export const isAlphanumeric = (value, error = true) => (
