@@ -1,9 +1,9 @@
 const moment = require('moment');
 
-const getAge = (dateOfBirth) => {
-  if (!moment(dateOfBirth, 'YYYY-MM-DD', true).isValid()) { return 0; }
+const getAge = (dateOfBirth, format) => {
+  if (!moment(dateOfBirth, format, true).isValid()) { return 0; }
 
-  return moment().diff(moment(dateOfBirth, 'YYYY-MM-DD', true), 'years');
+  return moment().diff(moment(dateOfBirth, format, true), 'years');
 };
 
 module.exports = getAge;
