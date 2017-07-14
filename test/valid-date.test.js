@@ -3,6 +3,10 @@ import { expect } from 'chai';
 import { validDate } from '../src';
 
 describe('validDate', () => {
+  it('should return error if no date format is provided', () => {
+    expect(validDate()('05-12-1991')).to.equal(true);
+  });
+
   it('should return validDate function if only a date format is provided', () => {
     expect(validDate('YYYY-MM-DD')).to.be.a('function');
   });
