@@ -14,7 +14,7 @@ export const minLength = min => (
 );
 
 export const validDate = format => (
-  (value, error = true) => (moment(value, format, true).isValid() ? undefined : error)
+  (value, error = true) => (!format || !moment(value, format, true).isValid() ? error : undefined)
 );
 
 export const maxAge = (max, format) => (
