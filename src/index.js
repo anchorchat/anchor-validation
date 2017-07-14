@@ -1,3 +1,4 @@
+import moment from 'moment';
 import getAge from './get-age';
 
 export { normalizeDate, normalizeUsername } from './normalizers';
@@ -10,6 +11,10 @@ export const maxLength = max => (
 
 export const minLength = min => (
   (value, error = true) => (value && value.length < min ? error : undefined)
+);
+
+export const validDate = format => (
+  (value, error = true) => (moment(value, format, true).isValid() ? undefined : error)
 );
 
 export const maxAge = (max, format) => (
