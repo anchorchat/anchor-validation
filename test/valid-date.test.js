@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { validDate } from '../src';
 
 describe('validDate', () => {
-  it('should return validDate function if only a date of birth is provided', () => {
+  it('should return validDate function if only a date format is provided', () => {
     expect(validDate('1991-05-12')).to.be.a('function');
   });
 
