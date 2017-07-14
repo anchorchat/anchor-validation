@@ -4,7 +4,7 @@ import { validDate } from '../src';
 
 describe('validDate', () => {
   it('should return validDate function if only a date format is provided', () => {
-    expect(validDate('1991-05-12')).to.be.a('function');
+    expect(validDate('YYYY-MM-DD')).to.be.a('function');
   });
 
   it('should return error message if validation fails', () => {
