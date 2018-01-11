@@ -1,5 +1,5 @@
 import moment from 'moment';
-import email from 'isemail';
+import isemail from 'isemail';
 import getAge from './get-age';
 
 export { normalizeDate, normalizeUsername } from './normalizers';
@@ -31,7 +31,7 @@ export const isAlphanumeric = (value, error = true) => (
 );
 
 export const isEmail = (value, error = true) => {
-  return !email.validate(value) ? error : undefined;
+  return !isemail.validate(value) ? error : undefined;
 };
 
 export const isEqual = (value, comparison, error = true) => (
