@@ -30,9 +30,9 @@ export const isAlphanumeric = (value, error = true) => (
   value && /[^a-zA-Z0-9]/.test(value) ? error : undefined
 );
 
-export const isEmail = (value, error = true) => {
-  return !isemail.validate(value) ? error : undefined;
-};
+export const isEmail = (value, error = true) => (
+  !isemail.validate(value) ? error : undefined
+);
 
 export const isEqual = (value, comparison, error = true) => (
   (value && comparison && value !== comparison) ? error : undefined
