@@ -14,4 +14,12 @@ describe('isEmail', () => {
   it('should return undefined if value passes check', () => {
     expect(isEmail('test@hotmail.com')).to.equal(undefined);
   });
+
+  it('should return undefined if value passes check', () => {
+    expect(isEmail('test@test.capital')).to.equal(undefined);
+  });
+
+  it('should return undefined if value passes check', () => {
+    expect(isEmail('test@events.chat')).to.equal(undefined);
+  });
 });
