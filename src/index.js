@@ -1,4 +1,5 @@
 import moment from 'moment';
+import email from 'isemail';
 import getAge from './get-age';
 
 export { normalizeDate, normalizeUsername } from './normalizers';
@@ -30,8 +31,7 @@ export const isAlphanumeric = (value, error = true) => (
 );
 
 export const isEmail = (value, error = true) => {
-  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-  return value && !emailRegex.test(value) ? error : undefined;
+  return !email.validate(value) ? error : undefined;
 };
 
 export const isEqual = (value, comparison, error = true) => (

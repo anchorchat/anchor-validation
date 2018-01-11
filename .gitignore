@@ -4,3 +4,4 @@ npm-debug.log
 dist
 debug
 .nyc_output
+package-lock.json
