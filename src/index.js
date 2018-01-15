@@ -1,5 +1,5 @@
 import moment from 'moment';
-import isemail from 'isemail';
+import isemail from '@anchorchat/isemail';
 import getAge from './get-age';
 
 export { normalizeDate, normalizeUsername } from './normalizers';
