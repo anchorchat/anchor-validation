@@ -48,7 +48,7 @@
     ]
   },
   "dependencies": {
-    "isemail": "^3.0.0",
+    "@anchorchat/isemail": "^3.0.0",
     "moment": "^2.20.1"
   }
 }
